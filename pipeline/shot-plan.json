@@ -1,0 +1,48 @@
+{
+ "model": "fal-ai/kling-video/v3/pro/image-to-video",
+ "duration": "5",
+ "negative_prompt": "blur, distort, low quality, cut, scene change, text, watermark, face",
+ "shots": [
+  {
+   "id": "s2",
+   "end_keyframe": "k2",
+   "prompt": "Maintain dark rainy cinematic realism and the indigo, slate and copper palette throughout. One continuous camera move: the camera glides forward low behind the hooded figure as he lifts the burning flare toward the giant carved stone wall, and the ancient glyphs ignite one row after another with molten copper light. No cuts, no text, face never visible."
+  },
+  {
+   "id": "s3",
+   "end_keyframe": "k3",
+   "prompt": "Maintain dark rainy cinematic realism and the indigo, slate and copper palette throughout. One continuous camera move: the camera tilts up and rises fast straight up the towering stepwell wall, chasing rivers of copper light racing up the carved staircases toward the opening of stormy sky far above. Rain streaks past. No cuts, no text."
+  },
+  {
+   "id": "s4",
+   "end_keyframe": "k4",
+   "prompt": "Maintain dark rainy cinematic realism and the indigo, slate and copper palette throughout. One continuous camera move: the camera rises out through the top of the stepwell, clears the stone rim and tilts level to reveal a vast flooded plain stretching to a colossal glowing city on the horizon under lightning. No cuts, no text."
+  },
+  {
+   "id": "s5",
+   "end_keyframe": "k5",
+   "prompt": "Maintain dark rainy cinematic realism and the indigo, slate and copper palette throughout. One continuous camera move: the camera flies fast and low over the mirror-flat floodwater toward the colossal city, the towers growing huge, their copper lights reflected below, lightning flickering in the clouds. No cuts, no text."
+  },
+  {
+   "id": "s6",
+   "end_keyframe": "k6",
+   "prompt": "Maintain dark rainy cinematic realism and the indigo, slate and copper palette throughout. One continuous camera move: the camera flies in between the colossal towers and pitches upward, rising vertically along the glass facades toward the churning storm clouds as lightning branches overhead. No cuts, no text."
+  },
+  {
+   "id": "s7",
+   "end_keyframe": "k7",
+   "prompt": "Maintain dark rainy cinematic realism and the indigo, slate and copper palette throughout. One continuous camera move: the camera punches upward into the dark storm clouds, lightning flashing inside them, and breaks out above into a calm sea of silver clouds under a sky full of stars. No cuts, no text."
+  },
+  {
+   "id": "s8",
+   "end_keyframe": "k8",
+   "prompt": "Maintain realistic cinematic night-sky realism and the indigo, slate and copper palette throughout. One continuous camera move: the camera keeps rising above the clouds into the black of space as the curve of the Earth appears, a copper sunrise flares on the horizon and a weather satellite with gold foil and solar panels drifts into the foreground. No cuts, no text."
+  },
+  {
+   "id": "s9",
+   "end_keyframe": "k9",
+   "prompt": "Maintain realistic cinematic space realism and the indigo, slate and copper palette throughout. One continuous camera move: the camera turns away from the satellite and glides toward an immense black monolith floating above the Earth; a vertical seam of copper-white light splits it open like a door, revealing a tiny hooded figure standing in the light. No cuts, no text."
+  }
+ ],
+ "rule": "start_image = last frame of the previous rendered shot; end_image = keyframe k{i}; fire in story order"
+}

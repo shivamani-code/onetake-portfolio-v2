@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MANI — One Take</title>
+<meta name="description" content="Mani's portfolio as one continuous film: Dead Language Live, Mirror World Hyderabad, Catch a Satellite, Max Space.">
+<meta name="theme-color" content="#05060a">
+<meta property="og:title" content="MANI — One Take">
+<meta property="og:description" content="One unbroken camera move, from the oldest stone to the farthest orbit. Four worlds, built by Mani.">
+<meta property="og:image" content="https://mani-onetake.sites.tab.bot/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500;800;900&family=Cormorant+Garamond:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- MANI — One Take. Engine written for this site (WebGL film, depth, type). Techniques studied from public scroll-film work; no third-party code copied except Lenis (MIT). -->
+<canvas id="gl" aria-hidden="true"></canvas>
+<img id="still" alt="" aria-hidden="true">
+<div id="fly" aria-hidden="true"></div>
+
+<div id="loader">
+  <div class="ld-mark">MANI</div>
+  <div class="ld-line"><i></i></div>
+  <div class="ld-cap"><span id="ldPct">00</span> &nbsp;·&nbsp; one take, no cuts</div>
+  <div class="ld-go">
+    <button class="btn-mag" data-enter="sound"><span>Enter with sound</span></button>
+    <button class="ld-silent" data-enter="silent">enter silent</button>
+  </div>
+</div>
+
+<header id="hud">
+  <a class="hud-mark" href="#" data-jump="0" aria-label="Back to the start">MANI</a>
+  <div class="hud-r">
+    <button id="snd" class="snd" aria-pressed="false" aria-label="Sound"><i></i><i></i><i></i><i></i><b>Sound off</b></button>
+    <button id="menuBtn" class="menu-btn" aria-expanded="false"><span>Worlds</span></button>
+  </div>
+</header>
+
+<div id="chap" aria-live="polite"><span class="ch-n">00</span><span class="ch-t">Prologue</span></div>
+<div id="alt"><span class="alt-l">ALT</span> <span id="altV">−42 m</span></div>
+<div id="rail"><i id="railFill"></i><b style="left:22%"></b><b style="left:44%"></b><b style="left:66%"></b><b style="left:84%"></b></div>
+
+<section id="hero" class="ov">
+  <p class="hero-k">Portfolio 2026 · one take</p>
+  <p class="hero-l">I build worlds<br>you can walk into.</p>
+  <p class="hero-s"><span>Scroll</span><i></i></p>
+</section>
+
+<!-- four worlds: each lives inside the shot it belongs to -->
+<section class="case ov" data-case="0" id="w-dll">
+  <div class="c-meta"><span class="c-n">01 / 04</span><span class="c-k">Voice · language · decipherment</span></div>
+  <h2 class="c-title" aria-label="Dead Language Live"><span>Dead Language</span><span>Live</span></h2>
+  <p class="c-line">Speak, and hear it back in Sanskrit. Plus a lab for the Indus script, still unread after 4,000 years.</p>
+  <div class="c-shots"><figure class="glass"><img src="img/dll-a.webp" alt="Dead Language Live on a phone: Sanskrit voice screen" loading="lazy"></figure><figure class="glass"><img src="img/dll-b.webp" alt="Dead Language Live: Indus script lab" loading="lazy"></figure></div>
+  <a class="btn-mag c-go" href="https://dead-language-live.sites.tab.bot/" target="_blank" rel="noopener"><span>Hear it speak</span><em>↗</em></a>
+</section>
+<section class="case ov" data-case="1" id="w-mirror">
+  <div class="c-meta"><span class="c-n">02 / 04</span><span class="c-k">3D city · time slider</span></div>
+  <h2 class="c-title" aria-label="Mirror World Hyderabad"><span>Mirror World</span><span>Hyderabad</span></h2>
+  <p class="c-line">Drag a whole city through time. Hyderabad in 3D, from 1990 to a 2040 forecast, in your hand.</p>
+  <div class="c-shots"><figure class="glass"><img src="img/mirror-a.webp" alt="Mirror World: 3D Hyderabad" loading="lazy"></figure><figure class="glass"><img src="img/mirror-b.webp" alt="Mirror World: the 1990 to 2040 slider" loading="lazy"></figure></div>
+  <a class="btn-mag c-go" href="https://mirror-hyderabad.sites.tab.bot/" target="_blank" rel="noopener"><span>Enter the city</span><em>↗</em></a>
+</section>
+<section class="case ov" data-case="2" id="w-sat">
+  <div class="c-meta"><span class="c-n">03 / 04</span><span class="c-k">Radio · weather satellites</span></div>
+  <h2 class="c-title" aria-label="Catch a Satellite"><span>Catch a</span><span>Satellite</span></h2>
+  <p class="c-line">Real photos of Earth, pulled out of weather-satellite radio and decoded line by line.</p>
+  <div class="c-shots"><figure class="glass"><img src="img/sat-a.webp" alt="Catch a Satellite: decoded Earth image" loading="lazy"></figure><figure class="glass"><img src="img/sat-b.webp" alt="Catch a Satellite: pass list" loading="lazy"></figure></div>
+  <a class="btn-mag c-go" href="https://catch-a-satellite.sites.tab.bot/" target="_blank" rel="noopener"><span>See the sky</span><em>↗</em></a>
+</section>
+<section class="case ov" data-case="3" id="w-max">
+  <div class="c-meta"><span class="c-n">04 / 04</span><span class="c-k">Privacy · encryption</span></div>
+  <h2 class="c-title" aria-label="Max Space"><span>Max</span><span>Space</span></h2>
+  <p class="c-line">A private cloud drive. Files are encrypted on your device; the server only ever holds noise.</p>
+  <div class="c-shots"><figure class="glass"><img src="img/max-a.webp" alt="Max Space: sign in" loading="lazy"></figure><figure class="glass"><img src="img/max-b.webp" alt="Max Space: encrypted drive" loading="lazy"></figure></div>
+  <a class="btn-mag c-go" href="https://max-space.sites.tab.bot/" target="_blank" rel="noopener"><span>Open the vault</span><em>↗</em></a>
+</section>
+
+<section id="contact" class="ov">
+  <p class="ct-k">End of the take</p>
+  <h2 class="ct-h"><span>Let’s build</span><span>the next world.</span></h2>
+  <a class="ct-mail btn-mag" href="mailto:mani@mail.tab.bot"><span>mani@mail.tab.bot</span></a>
+  <p class="ct-note">Ideas, design and direction by Mani. Built fast, with AI as the crew.</p>
+  <button class="ct-again" data-jump="0"><span>Play it again</span><em>↺</em></button>
+</section>
+
+<nav id="menu" aria-hidden="true">
+  <ol>
+    <li><button data-jump="w0"><em>01</em><span>Dead Language Live</span><small>the stepwell</small></button></li>
+    <li><button data-jump="w1"><em>02</em><span>Mirror World</span><small>the flood city</small></button></li>
+    <li><button data-jump="w2"><em>03</em><span>Catch a Satellite</span><small>orbit</small></button></li>
+    <li><button data-jump="w3"><em>04</em><span>Max Space</span><small>the vault</small></button></li>
+    <li><button data-jump="end"><em>→</em><span>Contact</span><small>mani@mail.tab.bot</small></button></li>
+  </ol>
+</nav>
+
+<div id="story" aria-hidden="true"></div>
+<noscript><div class="nos">MANI — Dead Language Live, Mirror World Hyderabad, Catch a Satellite, Max Space. mani@mail.tab.bot</div></noscript>
+<script src="lenis.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
